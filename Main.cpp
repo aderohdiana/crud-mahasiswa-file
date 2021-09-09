@@ -11,6 +11,7 @@ struct Mahasiswa {
 	string jurusan;
 };
 
+// function  prototype
 int getOption();
 void checkDatabase(fstream& data);
 void writeData(fstream& data, int posisi, Mahasiswa& inputMahasiswa);
@@ -136,6 +137,7 @@ void deleteRecord(fstream& data) {
 		}
 	}
 	// 4. kita pindahkan data dari file sementara ke data.bin
+
 	size = getDataSize(dataSementara);
 	data.close();
 	data.open("data.bin", ios::trunc | ios::out | ios::binary);
@@ -149,6 +151,7 @@ void deleteRecord(fstream& data) {
 }
 
 void updateRecord(fstream& data) {
+
 	int nomor;
 	Mahasiswa updateMahasiswa;
 	cout << "pilih no: ";
